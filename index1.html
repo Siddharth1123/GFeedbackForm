@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Feedback Form</title>
+<link rel="stylesheet" href="style.css">
+<script>
+function submitForm() {
+    // Fetching input values
+    var fullName = document.getElementById("fullName").value;
+    var mobileNumber = document.getElementById("mobileNumber").value;
+    var email = document.getElementById("email").value;
+    var className = document.getElementById("className").value;
+    var branch = document.getElementById("branch").value;
+    var feedback = document.getElementById("feedback").value;
+
+    // Printing input values to the next page
+    document.write("<h2>Feedback Details:</h2>");
+    document.write("<p><strong>Full Name:</strong> " + fullName + "</p>");
+    document.write("<p><strong>Mobile Number:</strong> " + mobileNumber + "</p>");
+    document.write("<p><strong>Email:</strong> " + email + "</p>");
+    document.write("<p><strong>Class:</strong> " + className + "</p>");
+    document.write("<p><strong>Branch:</strong> " + branch + "</p>");
+    document.write("<p><strong>Feedback:</strong> " + feedback + "</p>");
+}
+</script>
+</head>
+<h1>Student Feedback Form</h1>
+<form onsubmit="submitForm(); return false;">
+    <label for="fullName">Full Name:</label><br>
+    <input type="text" id="fullName" name="fullName" required><br><br>
+
+    <label for="mobileNumber">Mobile Number:</label><br>
+    <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="className">Class:</label><br>
+    <input type="text" id="className" name="className" required><br><br>
+
+    <label for="branch">Branch:</label><br>
+    <input type="text" id="branch" name="branch" required><br><br>
+
+    <label for="feedback">Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
